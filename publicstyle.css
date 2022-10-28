@@ -3,6 +3,9 @@
   --cyan: #00FFFF
 }
 
+.pinktext {color: #FF00FF}
+.cyantext {color: #00FFFF}
+
 a:link{color: #00FFFF}
 a:visited{color: #FF00FF}
 
