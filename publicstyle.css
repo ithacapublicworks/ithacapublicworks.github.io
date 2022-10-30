@@ -5,6 +5,9 @@
 
 .pinktext {color: #FF00FF}
 .cyantext {color: #00FFFF}
+.date {
+        color: #ff0000;
+      }
 
 a:link{color: #00FFFF}
 a:visited{color: #FF00FF}
