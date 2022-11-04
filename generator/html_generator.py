@@ -127,6 +127,6 @@ currentpath = os.path.abspath(os.curdir)
 os.chdir("..") #move up one directory for file saving
 with open('past_events.html','w',encoding='utf-8') as outfile: #utf-8 required to get 'special' characters like mac's bullshit quotes or whatever.
     n = outfile.write(oldpage)
-with open('index_test.html','w',encoding='utf-8') as outfile: #utf-8 required to get 'special' characters like mac's bullshit quotes or whatever.
+with open('index.html','w',encoding='utf-8') as outfile: #utf-8 required to get 'special' characters like mac's bullshit quotes or whatever.
     n = outfile.write(homepage)
 
