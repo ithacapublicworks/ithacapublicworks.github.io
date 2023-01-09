@@ -108,6 +108,16 @@ dec7 = {'date':'December 7th',
         }
 
 
+feb1= {'date':'February 1st',
+        'year':'2023',
+        'speakers': ['Megan Barrington','Dr. Seth Strickland'],
+        'flavors': ['science','humanities'],
+        'position': ['Phd Student in Astronomy and Mastcam-Z Science Team Member','Joseph F. Martino \'53 Lecturer in the Dept. of Literatures in English'],
+        'talk_titles':['Falling Stars: A Cometary Journey from Fiery Omens to Icy Worlds','The Last Medieval Scribe: John Colyns and the Death of Mixed Manuscripts'],
+        'abstracts': ['Summary coming soon!',
+                      'Summary coming soon!']
+        }
+
 def generate_page(s_list,old=1,preamble=preamble,about=about,datetime=datetime,footer=footer,crowd=crowd):
     talks = generate_s_list(s_list,old=old)
     if old:
@@ -118,7 +128,7 @@ def generate_page(s_list,old=1,preamble=preamble,about=about,datetime=datetime,f
     return outcode
 
 
-s_list = [dec7,nov2,oct5]
+s_list = [feb1,dec7,nov2,oct5]
 oldpage = generate_page(s_list[1:],old=1)#ignore most recent entry for old page
 homepage = generate_page([s_list[0],],old=0)#use only most recent entry for current page
 
