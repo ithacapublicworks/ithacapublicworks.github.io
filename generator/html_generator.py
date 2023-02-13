@@ -118,6 +118,17 @@ feb1= {'date':'February 1st',
                       '“The Last Medieval Scribe: John Colyns and Authorial Control,” takes the twilight of medieval manuscript culture as its focus. For a few years until 1521, a bookseller named John Colyns carefully constructed a book that was very ordinary for his time but one of a dying breed. It contained, among other things, both century-old medieval poem and one that was written during his lifetime, both copied by hand -- the latter likely from a copy circulated among friends of the author. Colyns prophesied the fame of the new works in the book to his book-binding efforts – we’ll discover whether his claim is founded or whether other forces upended his plans. With this book as our guide, we\'ll look at some general principles of medieval and early modern hand-made bookmaking to learn how the material of books – the paper, the ink, the binding, and the order of its contents – matters to the ‘material’ of literature – the content and interpretation of the works within.']
         }
 
+march1 = {'date':'March 1st',
+        'year':'2023',
+        'speakers': ['Daniela Samur','Dr. Luke Keller'],
+        'flavors': ['history','physics'],
+        'position': ['PhD Candidate in the Cornell History Dept.','Professor of Physics and Astronomy at Ithaca College'],
+        'talk_titles':[r'“Plenty penmanship”: The Politics of Paper in late Nineteenth-century Bogotá',r'Primordial planets: When did they form and what were they like?'],
+        'abstracts': ['''In late nineteenth century Bogotá, the Biblioteca Nacional –Colombia’s legal deposit library– was labeling some of its prints as “useless” and selling them as scrap. The money from the sales, directors of the Biblioteca explained, would be put to better use in paying for bindings. Other books, deemed more important and worth saving, needed to be properly bound so that they could resist peoples’ fingers, time, and mice. The tension between preservation and destruction at the Biblioteca Nacional in Bogotá during the late nineteenth century was not an issue about hierarchies of knowledge, but one about the daily and mundane logistics of ordering. This is a story about how workers at Colombia’s central library dreamed of an organized and exhaustive collection of prints but couldn’t even manage to walk through the hallways without stumbling over piles of books. Gathering, inventorying, cataloguing, and putting books on shelves, I show in this presentation, was a material practice, and one shaped by the scarcity of paper and of people’s penmanship. 
+
+''', "Student: When did planets first form?<br><br>Prof. Luke: Well, within a few million years of the sun's formation the planets formed in a disk of gas and dust called a protoplanetary disk.<br><br>Student: I know that. My question is when did the FIRST planets form? Was it right after the Big Bang?<br><br>Prof. Luke: Well...hmmm...I don't know, let's Google it.<br><br><br>Turns out no one knows in much detail. And so began my current research project. We understand the process of planet formation in our own galaxy with increasing detail and observational evidence, but how can we extend that understanding to planet formation in the early universe? Presumably the first planets formed around the first stars. In principle we can observe the first stars by observing the first galaxies, but they are so far away that the galaxies appear as dim red fuzzballs even using the James Webb Space Telescope. Resolving individual stars within those galaxies is not currently possible. We will explore this conundrum and a possible solution. Then we'll reward ourselves with some wild speculation about aliens."]
+        }
+
 def generate_page(s_list,old=1,preamble=preamble,about=about,datetime=datetime,footer=footer,crowd=crowd):
     talks = generate_s_list(s_list,old=old)
     if old:
@@ -128,7 +139,8 @@ def generate_page(s_list,old=1,preamble=preamble,about=about,datetime=datetime,f
     return outcode
 
 
-s_list = [feb1,dec7,nov2,oct5]
+
+s_list = [march1,feb1,dec7,nov2,oct5]
 oldpage = generate_page(s_list[1:],old=1)#ignore most recent entry for old page
 homepage = generate_page([s_list[0],],old=0)#use only most recent entry for current page
 
