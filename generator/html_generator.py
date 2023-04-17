@@ -140,6 +140,16 @@ april5 = {'date':'April 5th',
 ''', "For over a century, audio technology has been an integral component to experiencing and sharing music. Recording has evolved from a novelty which captured a vague facsimile of a performance to a technically superior mode of expression which in most cases supplants live performance. Throughout this evolution, there have been several instances where a technological advancement changed the recording and consumption processes permanently; mass duplication, electrical recording, magnetic tape, stereo capture and disc-cutting, multitrack recording, and digital recording are just a few of the most consequential advancements. In 2023, we are currently experiencing another transformative advancement – immersive audio. A once esoteric format has quickly become accessible to consumers through streaming platforms, and the recording industry is racing to catch up. This presentation will highlight a few of these key transformative events as well as some of the music indicative of these advancements. Emphasis will be placed on immersive audio technology, and musical examples will be played back over a (modest) immersive sound system. Perhaps history offers some clues to understand where we might be heading next."]
         }
 
+may3 = {'date':'May 3rd',
+        'year':'2023',
+        'speakers': ['Molly Ryan','Karl Smolenski'],
+        'flavors': ['film','science'],
+        'position': ['Director of Cornell Cinema','Project Manager at the Cornell Synchrotron Accelerator'],
+        'talk_titles':[r'Movie Magic/Sounding Dissent',r'What the Hell is a Higgs\'s Boson? An Insider\'s Look at the Physics of the Large Hadron Collider at CERN'],
+        'abstracts': ['''In this two-part presentation, Molly Ryan, the new director of Cornell Cinema, will share her programming vision for Cornell Cinema and argue why it still matters to see films in movie theater. She will then discuss her research on sound and violence in the television plays of British director Alan Clarke—and why it might not make sense to show these particular films at the cinema (despite how much she loves them).
+
+''', "Details Coming Soon!"]
+        }
 
 
 def generate_page(s_list,old=1,preamble=preamble,about=about,datetime=datetime,footer=footer,crowd=crowd):
@@ -153,7 +163,7 @@ def generate_page(s_list,old=1,preamble=preamble,about=about,datetime=datetime,f
 
 
 
-s_list = [april5,march1,feb1,dec7,nov2,oct5]
+s_list = [may3,april5,march1,feb1,dec7,nov2,oct5]
 oldpage = generate_page(s_list[1:],old=1)#ignore most recent entry for old page
 homepage = generate_page([s_list[0],],old=0)#use only most recent entry for current page
 
