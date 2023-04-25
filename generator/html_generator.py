@@ -145,8 +145,10 @@ may3 = {'date':'May 3rd',
         'speakers': ['Molly Ryan','Karl Smolenski'],
         'flavors': ['film','science'],
         'position': ['Director of Cornell Cinema','Project Manager at the Cornell Synchrotron Accelerator'],
-        'talk_titles':[r'Movie Magic/Sounding Dissent',r'What the Hell is a Higgs\'s Boson? An Insider\'s Look at the Physics of the Large Hadron Collider at CERN'],
-        'abstracts': ['''In this two-part presentation, Molly Ryan, the new director of Cornell Cinema, will share her programming vision for Cornell Cinema and argue why it still matters to see films in movie theater. She will then discuss her research on sound and violence in the television plays of British director Alan Clarke—and why it might not make sense to show these particular films at the cinema (despite how much she loves them).
+        'talk_titles':[r'Movie Magic/Sounding Dissent',r"What the Hell is a Higgs's Boson? An Insider's Look at the Physics of the Large Hadron Collider at CERN"],
+        'abstracts': ['''In this two-part presentation, Molly Ryan, the new director of Cornell Cinema, will outline her programming vision for Cornell Cinema and argue why it still matters to see films in movie theater. She will then discuss her research on sound and violence in the work of British television director Alan Clarke (and why it might not make sense to show these films at Cornell Cinema despite how much she loves them). Her presentation will explore Clarke’s engagement with sound, domestic space, and the media landscape of Thatcherite Britain in three films produced for the BBC (ROAD, CHRISTINE, and STARS OF THE ROLLER STATE DISCO), focusing on how Clarke effectively weaponized the genre of the television play in the 1980s, using it to nationalize his political dissent, undermine Margaret Thatcher’s political rhetoric, and problematize British nationalism.
+
+ 
 
 ''', "Details Coming Soon!"]
         }
