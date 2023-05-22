@@ -157,6 +157,15 @@ may3 = {'date':'May 3rd',
   <img src="images/karl_fig.png" class='center'>
  </div>''']}
 
+june7 = {'date':'June 7th',
+        'year':'2023',
+        'speakers': ['Allison Ritterhaus','Dr. Daisy Rosas Vargas'],
+        'flavors': ['humanities','chemistry'],
+        'position': ['','Associate Professor of Chemistry at Ithaca College'],
+        'talk_titles':[r'Replica, Repair, Forgery: Archaeological Sites as Art Forms',r'Behind the Taste: The Chemistry of Whiskey'],
+        'abstracts': [''' “Step into the past!” Public communications related to archaeological sites often promise an immersive experience that allows visitors to enter a specific historic moment in a particular place, a kind of time travel. But how realistic is this premise? In this talk, I will begin with a case study of a Roman villa buried by the 79 CE eruption of Mount Vesuvius on the Bay of Naples, discussing its history of excavation, reconstruction, presentation to the public, and diffusion through contemporary media around the question of where, and whether, the “real” villa exists. The relevance of this question hinges on public perception: how do archaeologists communicate their findings and knowledge, as well as the gaps, with those who visit? I will close with a brief comparison to an American “archaeological” park and the ways that public-facing historical sites affect the way that people relate emotionally to the past.''', '''Description coming soon!''']
+        }
+
 
 def generate_page(s_list,old=1,preamble=preamble,about=about,datetime=datetime,footer=footer,crowd=crowd):
     talks = generate_s_list(s_list,old=old)
@@ -169,7 +178,7 @@ def generate_page(s_list,old=1,preamble=preamble,about=about,datetime=datetime,f
 
 
 
-s_list = [may3,april5,march1,feb1,dec7,nov2,oct5]
+s_list = [june7,may3,april5,march1,feb1,dec7,nov2,oct5]
 oldpage = generate_page(s_list[1:],old=1)#ignore most recent entry for old page
 homepage = generate_page([s_list[0],],old=0)#use only most recent entry for current page
 
