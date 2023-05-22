@@ -161,7 +161,7 @@ june7 = {'date':'June 7th',
         'year':'2023',
         'speakers': ['Allison Ritterhaus','Dr. Daisy Rosas Vargas'],
         'flavors': ['humanities','chemistry'],
-        'position': ['','Associate Professor of Chemistry at Ithaca College'],
+        'position': ['Lynch Family Postdoctoral Associate in Curricular Engagement at the Johnson Museum','Associate Professor of Chemistry at Ithaca College'],
         'talk_titles':[r'Replica, Repair, Forgery: Archaeological Sites as Art Forms',r'Behind the Taste: The Chemistry of Whiskey'],
         'abstracts': [''' “Step into the past!” Public communications related to archaeological sites often promise an immersive experience that allows visitors to enter a specific historic moment in a particular place, a kind of time travel. But how realistic is this premise? In this talk, I will begin with a case study of a Roman villa buried by the 79 CE eruption of Mount Vesuvius on the Bay of Naples, discussing its history of excavation, reconstruction, presentation to the public, and diffusion through contemporary media around the question of where, and whether, the “real” villa exists. The relevance of this question hinges on public perception: how do archaeologists communicate their findings and knowledge, as well as the gaps, with those who visit? I will close with a brief comparison to an American “archaeological” park and the ways that public-facing historical sites affect the way that people relate emotionally to the past.''', '''Description coming soon!''']
         }
