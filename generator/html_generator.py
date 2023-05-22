@@ -159,7 +159,7 @@ may3 = {'date':'May 3rd',
 
 june7 = {'date':'June 7th',
         'year':'2023',
-        'speakers': ['Allison Ritterhaus','Dr. Daisy Rosas Vargas'],
+        'speakers': ['Alison Ritterhaus','Dr. Daisy Rosas Vargas'],
         'flavors': ['humanities','chemistry'],
         'position': ['Lynch Family Postdoctoral Associate in Curricular Engagement at the Johnson Museum','Associate Professor of Chemistry at Ithaca College'],
         'talk_titles':[r'Replica, Repair, Forgery: Archaeological Sites as Art Forms',r'Behind the Taste: The Chemistry of Whiskey'],
