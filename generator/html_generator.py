@@ -159,13 +159,14 @@ may3 = {'date':'May 3rd',
 
 june7 = {'date':'June 7th',
         'year':'2023',
-        'speakers': ['Alison Ritterhaus','Dr. Daisy Rosas Vargas'],
-        'flavors': ['humanities','chemistry'],
-        'position': ['Lynch Family Postdoctoral Associate in Curricular Engagement at the Johnson Museum','Associate Professor of Chemistry at Ithaca College'],
-        'talk_titles':[r'Replica, Repair, Forgery: Archaeological Sites as Art Forms',r'Behind the Taste: The Chemistry of Whiskey'],
-        'abstracts': [''' “Step into the past!” Public communications related to archaeological sites often promise an immersive experience that allows visitors to enter a specific historic moment in a particular place, a kind of time travel. But how realistic is this premise? In this talk, I will begin with a case study of a Roman villa buried by the 79 CE eruption of Mount Vesuvius on the Bay of Naples, discussing its history of excavation, reconstruction, presentation to the public, and diffusion through contemporary media around the question of where, and whether, the “real” villa exists. The relevance of this question hinges on public perception: how do archaeologists communicate their findings and knowledge, as well as the gaps, with those who visit? I will close with a brief comparison to an American “archaeological” park and the ways that public-facing historical sites affect the way that people relate emotionally to the past.''', '''We pick up a cold glass to drink, beads of water running down the side. The brown intoxicating liquid tastes bitter and smells earthy, with a touch of sweetness. These descriptions sound like it MUST belong to precious morning iced coffee.  Not quite. This is whiskey. We can use the same visual, olfactory, and touch senses used to enjoy coffee to learn about chemistry that makes whiskey. This talk will focus on American-made whiskey and cocktails with a smokey touch of international facts.
+        'speakers': ['Dr. Daisy Rosas Vargas','Dr. Alison Ritterhaus',],
+        'flavors': ['chemistry','humanities'],
+        'position': ['Associate Professor of Chemistry at Ithaca College','Lynch Family Postdoctoral Associate in Curricular Engagement at the Johnson Museum',],
+        'talk_titles':[r'Behind the Taste: The Chemistry of Whiskey',r'Replica, Repair, Forgery: Archaeological Sites as Art Forms',],
+        'abstracts': ['''We pick up a cold glass to drink, beads of water running down the side. The brown intoxicating liquid tastes bitter and smells earthy, with a touch of sweetness. These descriptions sound like it MUST belong to precious morning iced coffee.  Not quite. This is whiskey. We can use the same visual, olfactory, and touch senses used to enjoy coffee to learn about chemistry that makes whiskey. This talk will focus on American-made whiskey and cocktails with a smokey touch of international facts.
 
-''']
+''',
+                      ''' “Step into the past!” Public communications related to archaeological sites often promise an immersive experience that allows visitors to enter a specific historic moment in a particular place, a kind of time travel. But how realistic is this premise? In this talk, I will begin with a case study of a Roman villa buried by the 79 CE eruption of Mount Vesuvius on the Bay of Naples, discussing its history of excavation, reconstruction, presentation to the public, and diffusion through contemporary media around the question of where, and whether, the “real” villa exists. The relevance of this question hinges on public perception: how do archaeologists communicate their findings and knowledge, as well as the gaps, with those who visit? I will close with a brief comparison to an American “archaeological” park and the ways that public-facing historical sites affect the way that people relate emotionally to the past.''', ]
         }
 
 
