@@ -169,6 +169,27 @@ june7 = {'date':'June 7th',
                       ''' “Step into the past!” Public communications related to archaeological sites often promise an immersive experience that allows visitors to enter a specific historic moment in a particular place, a kind of time travel. But how realistic is this premise? In this talk, I will begin with a case study of a Roman villa buried by the 79 CE eruption of Mount Vesuvius on the Bay of Naples, discussing its history of excavation, reconstruction, presentation to the public, and diffusion through contemporary media around the question of where, and whether, the “real” villa exists. The relevance of this question hinges on public perception: how do archaeologists communicate their findings and knowledge, as well as the gaps, with those who visit? I will close with a brief comparison to an American “archaeological” park and the ways that public-facing historical sites affect the way that people relate emotionally to the past.''', ]
         }
 
+july5 = {'date':'July 5th',
+        'year':'2023',
+        'speakers': ['Dr. Zach Ulibarri','Dr. Adam J. Hawkins',],
+        'flavors': ['space mission','geothermal energy'],
+        'position': ['Postdoctoral Associate in the Cornell ASTRA Lab','Lynch Family Postdoctoral Associate in Curricular Engagement at the Johnson Museum',],
+        'talk_titles':[r'On the Choice of a Rocket: How congressional politics can make you spend hundreds of millions of dollars planning for the wrong mission but then still get mad at you for going over budget',r'Fires from the Deep: Earth’s Internal Heat as a Solution to the Global Energy Problem',],
+        'abstracts': ['''
+In 2024 the Europa Clipper will launch on a SpaceX Falcon Heavy rocket to begin its five and half year trip to Jupiter, where it will study the icy ocean world of Europa (which is one of the best bets for alien life in our own solar system!). But for quite some time, NASA mission planners had to allow for the possibility of launching on both the Falcon Heavy and the United Launch Alliance Space Launch System (SLS). Why? Because the SLS had friends in congress, of course. In this talk, we'll learn about how congressional politics can make life hell for mission planning, why NASA missions are so expensive, what single points of failure are, and why the indecision of launch vehicles can burn unbelievable sums of money. We'll also look at the Galileo spacecraft as a cautionary tale about changing mission parameters late in the game.
+<br><br>
+<div class="box">
+  <img src="images/ulibarri.png" style = 'width: 550' class='center'>
+ </div>
+''',
+                      ''' With a global population approaching 10 billion people, how can we bring Earth’s population to the living standards of the United States and/or the European Union while simultaneously reducing greenhouse gas emissions? In this talk, Dr. Hawkins will introduce the audience to the nuanced challenge of simultaneously tackling climate change while expanding access to energy infrastructure in under-developed regions of the world. Topics will include limitations of intermittent electricity suppliers, options for baseload power generators, and the potential of geothermal energy to transform global energy infrastructure, including the Earth Source Heat project at Cornell University.
+<br><br>
+<div class="box">
+  <img src="images/hawkinsbanner.jpg" class='center'>
+ </div>
+''', ]
+        }
+
 
 def generate_page(s_list,old=1,preamble=preamble,about=about,datetime=datetime,footer=footer,crowd=crowd):
     talks = generate_s_list(s_list,old=old)
@@ -181,7 +202,7 @@ def generate_page(s_list,old=1,preamble=preamble,about=about,datetime=datetime,f
 
 
 
-s_list = [june7,may3,april5,march1,feb1,dec7,nov2,oct5]
+s_list = [july5,june7,may3,april5,march1,feb1,dec7,nov2,oct5]
 oldpage = generate_page(s_list[1:],old=1)#ignore most recent entry for old page
 homepage = generate_page([s_list[0],],old=0)#use only most recent entry for current page
 
