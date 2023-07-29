@@ -173,7 +173,7 @@ july5 = {'date':'July 5th',
         'year':'2023',
         'speakers': ['Dr. Zach Ulibarri','Dr. Adam J. Hawkins',],
         'flavors': ['space mission','geothermal energy'],
-        'position': ['Postdoctoral Associate in the Cornell ASTRA Lab','Lynch Family Postdoctoral Associate in Curricular Engagement at the Johnson Museum',],
+        'position': ['Postdoctoral Associate in the Cornell ASTRA Lab','Postdoctoral Fellow in the Smith School of Chemical and Biomolecular Engineering at Cornell',],
         'talk_titles':[r'On the Choice of a Rocket: How congressional politics can make you spend hundreds of millions of dollars planning for the wrong mission but then still get mad at you for going over budget',r'Fires from the Deep: Earth’s Internal Heat as a Solution to the Global Energy Problem',],
         'abstracts': ['''
 In 2024 the Europa Clipper will launch on a SpaceX Falcon Heavy rocket to begin its five and half year trip to Jupiter, where it will study the icy ocean world of Europa (which is one of the best bets for alien life in our own solar system!). But for quite some time, NASA mission planners had to allow for the possibility of launching on both the Falcon Heavy and the United Launch Alliance Space Launch System (SLS). Why? Because the SLS had friends in congress, of course. In this talk, we'll learn about how congressional politics can make life hell for mission planning, why NASA missions are so expensive, what single points of failure are, and why the indecision of launch vehicles can burn unbelievable sums of money. We'll also look at the Galileo spacecraft as a cautionary tale about changing mission parameters late in the game.
@@ -187,6 +187,21 @@ In 2024 the Europa Clipper will launch on a SpaceX Falcon Heavy rocket to begin 
 <div class="box">
   <img src="images/hawkinsbanner.jpg" class='center'>
  </div>
+''', ]
+        }
+
+
+july5 = {'date':'August 2nd',
+        'year':'2023',
+        'speakers': ['Jay Leeming','Dr. Daniel Sprockett',],
+        'flavors': ['mythology','microbiology'],
+        'position': ['Performance Storyteller','Postdoctoral Associate in the Cornell Dept. of Ecology and Evolutionary Biology',],
+        'talk_titles':['''How to tell Epic Stories and Save the Planet at the Same Time'''
+                       ,'''Awash in Wee Beasties: How microbial diversity shapes the animal world (and your own behavior)''',],
+        'abstracts': ['''
+Before the industrial revolution every healthy community on the planet included numerous storytellers, individuals trained in poetry, music and the dream-logic of mythology who would regularly dazzle their listeners with mind-opening tales of love, death and other worlds. Over the last century we have surrendered this power to multinational corporations, and the consequences have not been good. Performance storyteller Jay Leeming has spent years telling stories in theaters, schools, and National Parks, and in this talk he will not only illuminate his own process of learning to tell both the Odyssey and the Mahabharata epic of India but will also offer guidance in how we can turn off Netflix, awaken the visionary mythteller within each of us, and save the planet through story.
+''',
+                      '''The gut microbiome, or the complex community of microbes that colonize the intestinal tract, can have a wide range of effects on their host’s physiology, metabolism, and behavior. In humans, much has been discovered about how these microbes impact a person’s health and wellbeing, but much less is known about how they influence the fitness of other animals. In this talk, Dr. Sprockett will explore the ways that the gut microbiome impacts their animals hosts ranging from rodents to birds and even primates, with a focus on how we know what we know. Topics will span from short-term responses to long-term evolutionary consequences, and even how microbes might be affecting everyday decisions. The presentation will conclude with a (hopeful!) look at the future of microbiome-based interventions.
 ''', ]
         }
 
