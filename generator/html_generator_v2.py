@@ -89,9 +89,9 @@ def generate_event(rows,old=1):
         else:
             color = [pink,cyan]
         if count ==1: #first speaker needs no line breaks and no 'and'
-            flavorcode = "A <i>"+row['flavor']+"</i> talk:\n"
+            flavorcode = "<i>"+row['flavor']+"</i> talk:\n"
         else: #subsequent speakers need line breaks
-            flavorcode = "\n\n<br><br>and a <i>"+row['flavor']+"</i> talk:\n"
+            flavorcode = "\n\n<br><br>and <i>"+row['flavor']+"</i> talk:\n"
 
         titlecode = "<h3><span style='color: "+color[0]+"'>"+'"'+row['title']+'"</span></h3>'
         
