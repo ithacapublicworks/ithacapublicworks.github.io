@@ -18,43 +18,7 @@ def assemble(codes):
         output=output+i+'\n\n'
     return output
 
-def generate_date_string(i,old=1):
-    n_talks = len(i['speakers'])
-    if old:
-        html = "\n\nThe <span style='color: "+cyan+"'>"+i['date']+"</span> <span style='color: "+pink+"'>Public Works</span> event featured "+str(n_talks)+" talks:\n\n<br><br>"
-    else:
-        html = "\n\nThe <span style='color: "+cyan+"'>"+i['date']+"</span> <span style='color: "+pink+"'>Public Works</span> event will feature "+str(n_talks)+" talks:\n\n<br><br>"
-    return html
 
-def generate_s_list(s_list,old=1):
-    html = ''
-
-    allcodes = []
-    for i in s_list:
-        datecode = generate_date_string(i,old)
-        count = 1
-        talk_codes = [datecode,]
-        for j in np.arange(len(i['speakers'])):
-            if count%2:
-                color = [cyan,pink]
-            else:
-                color = [pink,cyan]
-            if count ==1:
-                flavorcode = "A <i>"+i['flavors'][j]+"</i> talk:\n"
-            else:
-                flavorcode = "\n\n<br><br>and a <i>"+i['flavors'][j]+"</i> talk:\n"
-            titlecode = "<h3><span style='color: "+color[0]+"'>"+'"'+i['talk_titles'][j]+'"</span></h3>'
-            authorcode = "<span style='color: "+color[1]+"'> by "+i['speakers'][j]+"</span>\n<br>"+i['position'][j]+"\n<br>\n<br>"
-            abstractcode = i['abstracts'][j]
-            assembledcode = assemble([flavorcode,titlecode,authorcode,abstractcode])
-            talk_codes.append(assembledcode)
-            count +=1
-        eventcodes = assemble(talk_codes)
-        allcodes.append(eventcodes)
-        allcodes.append('<br><br><br><br>') #add some space to delineate different nights
-    allcodes = assemble(allcodes)
-        
-    return allcodes
 
 def generate_date_code(date,year,rows,old=1): #creates alternating colors for the date and public works
     n_talks =len(rows['speaker'])
@@ -68,8 +32,8 @@ def generate_date_code(date,year,rows,old=1): #creates alternating colors for th
 
 
 def generate_event(rows,old=1):
-    print('in generate')
-    print(rows)
+    #print('in generate')
+    #print(rows)
     
     html = ''
     allcodes = ''
@@ -78,22 +42,27 @@ def generate_event(rows,old=1):
     year = str(int(np.array(rows['year'])[0]))
     eventnum = np.array(rows['event'])[0]
 
+    hashcode = np.array(rows['hashcode'])
+
+    print('hashcode = '+str(hashcode))
+    #print(hashcode[0])
+
     datecode = generate_date_code(date,year,rows,old)
     allcodes = allcodes +datecode
 
-    count = 1
+    count = 0
     talk_codes = ''
     for index,row in rows.iterrows():
         if count%2: #alternate colors by making even lines cyan pink and odd lines pink cyan
             color = [cyan,pink]
         else:
             color = [pink,cyan]
-        if count ==1: #first speaker needs no line breaks and no 'and'
+        if count ==0: #first speaker needs no line breaks and no 'and'
             flavorcode = "<i>"+row['flavor']+"</i> talk:\n"
         else: #subsequent speakers need line breaks
             flavorcode = "\n\n<br><br>and <i>"+row['flavor']+"</i> talk:\n"
 
-        titlecode = "<h3><span style='color: "+color[0]+"'>"+'"'+row['title']+'"</span></h3>'
+        titlecode = "<h3 id='"+str(hashcode[count])+"'><span style='color: "+color[0]+"'>"+'"'+row['title']+'"</span></h3>'
         
         #print(color[1])
         #print("<span style='color: "+str(color[1])+"'> by "+row['speaker']+"</span>\n<br>"+row['position'])
@@ -102,12 +71,12 @@ def generate_event(rows,old=1):
         assembledcode = assemble([flavorcode,titlecode,authorcode,abstractcode])
         talk_codes = talk_codes+assembledcode
         count +=1
-    print(allcodes)
+    #print(allcodes)
     allcodes = allcodes +talk_codes
     allcodes = allcodes +'<br><br><br><br>' #add some space to delineate different nights
     #    allcodes = assemble(allcodes)
 
-    print(allcodes)
+    #print(allcodes)
         
     return allcodes
             
@@ -146,9 +115,9 @@ events = pd.read_excel(r'public works.xlsx') #import the data
 n_events = events['event'].max() #get the total number of events
 
 
-print('processing newest event, number '+str(n_events))
+#print('processing newest event, number '+str(n_events))
 rows = events.loc[events['event']==n_events] #get csv rows of most recent event
-print(rows)
+#print(rows)
 newesteventtalks = generate_event(rows,old=0)#5generate talk text for it
 
 homepage = assemble((preamble,about,newesteventtalks,crowd,datetime,footer))
@@ -158,10 +127,10 @@ homepage = assemble((preamble,about,newesteventtalks,crowd,datetime,footer))
 htmlcode = assemble([preamble,'\n\n<br><br>',crowd])
 talks = ''
 for i in np.arange(1,n_events): #for every entry except the last one
-    print(i)
-    print('processing event '+str(i))
+    #print(i)
+    #print('processing event '+str(i))
     rows = events.loc[events['event'] == i] #get locations of each row that matches the current event number
-    print(rows)
+    #print(rows)
     nightcode = generate_event(rows) #generate the html code to describe that night of talks
     talks = talks + nightcode #add each talk to the list of old talks
 
