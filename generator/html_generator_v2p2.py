@@ -1,12 +1,7 @@
 import numpy as np
 import os
-
 import csv
-
 import pandas as pd
-import FreeSimpleGUI as sg
-import traceback
-
 
 
 #speakerlist = pd.read_csv(r'speakerlist.csv')
@@ -60,9 +55,9 @@ def generate_event(rows,old=1):
         else:
             color = [pink,cyan]
         if count ==0: #first speaker needs no line breaks and no 'and'
-            flavorcode = "<i>"+row['flavor']+"</i> talk:\n"
+            flavorcode = row['flavor'].split()[0] + " <i>"+ ' '.join(row['flavor'].split()[1:])+"</i> talk:\n"
         else: #subsequent speakers need line breaks
-            flavorcode = "\n\n<br><br>and <i>"+row['flavor']+"</i> talk:\n"
+            flavorcode = "\n\n<br><br>and " + row['flavor'].split()[0] +" <i>"+' '.join(row['flavor'].split()[1:])+"</i> talk:\n"
 
         titlecode = "<h3 id='"+str(hashcode[count])+"'><span style='color: "+color[0]+"'>"+'"'+row['title']+'"</span></h3>'
         
@@ -101,7 +96,7 @@ def make_pages():
 
 
 
-    events = pd.read_excel(r'public works.xlsx') #import the data
+    events = pd.read_csv('speaker_details.tsv', sep='\t') #import the data
     #print(events)
 
     n_events = events['event'].max() #get the total number of events
@@ -119,7 +114,7 @@ def make_pages():
 
     htmlcode = assemble([preamble,'\n\n<br><br>',crowd])
     talks = ''
-    for i in np.arange(1,n_events): #for every entry except the last one
+    for i in np.arange(n_events-1, 0, -1): #for every entry except the last one
         #print(i)
         #print('processing event '+str(i))
         rows = events.loc[events['event'] == i] #get locations of each row that matches the current event number
@@ -144,36 +139,43 @@ def make_pages():
         n = outfile.write(htmlcode)
     with open('index.html','w',encoding='utf-8') as outfile: #utf-8 required to get 'special' characters like mac's bullshit quotes or whatever.
         n = outfile.write(homepage)
+        
+        
+def main():
+    make_pages()
+    
+if __name__ == "__main__":
+    main()
 
-layout = [
-          [sg.Text('Public Works Website Maker V2.2',font=('Arial Bold',20))],
-          [sg.Text('For help contact zulibarri@cornell.edu')],
-          #[sg.Input(key='jpgname',default_text=init.get('jpgname'),size=(10,1))],
-          #[sg.Text('RAW Images File Type (For Nikon, usually NEF, for Canon, usually CR2, CR3, or CRW)')],
-          #[sg.Input(key='rawname',default_text=init.get('rawname'),size=(10,1))],
-          
-          [sg.Button('Make It So',key='generate'),sg.Button('Cancel',key='cancel')]]
-
-window = sg.Window('Aspect', layout)
-
-
-currentpath = os.path.abspath(os.curdir)
-print('current path is '+str(currentpath))
-
-files = os.listdir(os.curdir)  #files and directories
-print('files in current directory are:')
-print(str(files))
-
-while True:                             # The Event Loop
-    event, values = window.read() #wait until values entered and you press the go button
-    #print('event = '+str(event))
-    if event == 'generate':
-        try:
-            make_pages()
-        except Exception as e:
-            error_message = traceback.format_exc()  # Get full traceback as a string
-            sg.popup("Error!", error_message, title="Error", keep_on_top=True)
-
-    print('Done!')
+# layout = [
+#           [sg.Text('Public Works Website Maker V2.2',font=('Arial Bold',20))],
+#           [sg.Text('For help contact zulibarri@cornell.edu')],
+#           #[sg.Input(key='jpgname',default_text=init.get('jpgname'),size=(10,1))],
+#           #[sg.Text('RAW Images File Type (For Nikon, usually NEF, for Canon, usually CR2, CR3, or CRW)')],
+#           #[sg.Input(key='rawname',default_text=init.get('rawname'),size=(10,1))],
+#           
+#           [sg.Button('Make It So',key='generate'),sg.Button('Cancel',key='cancel')]]
+# 
+# window = sg.Window('Aspect', layout)
+# 
+# 
+# currentpath = os.path.abspath(os.curdir)
+# print('current path is '+str(currentpath))
+# 
+# files = os.listdir(os.curdir)  #files and directories
+# print('files in current directory are:')
+# print(str(files))
+# 
+# while True:                             # The Event Loop
+#     event, values = window.read() #wait until values entered and you press the go button
+#     #print('event = '+str(event))
+#     if event == 'generate':
+#         try:
+#             make_pages()
+#         except Exception as e:
+#             error_message = traceback.format_exc()  # Get full traceback as a string
+#             sg.popup("Error!", error_message, title="Error", keep_on_top=True)
+# 
+#     print('Done!')
 
 
