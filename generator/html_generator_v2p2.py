@@ -2,7 +2,7 @@ import numpy as np
 import os
 import csv
 import pandas as pd
-
+import ipdb
 
 #speakerlist = pd.read_csv(r'speakerlist.csv')
 
@@ -60,7 +60,7 @@ def generate_event(rows,old=1):
             flavorcode = "\n\n<br><br>and " + row['flavor'].split()[0] +" <i>"+' '.join(row['flavor'].split()[1:])+"</i> talk:\n"
 
         titlecode = "<h3 id='"+str(hashcode[count])+"'><span style='color: "+color[0]+"'>"+'"'+row['title']+'"</span></h3>'
-        
+        # ipdb.set_trace()
         #print(color[1])
         #print("<span style='color: "+str(color[1])+"'> by "+row['speaker']+"</span>\n<br>"+row['position'])
         authorcode = "<span style='color: "+str(color[1])+"'> by "+row['speaker']+"</span>\n<br>"+row['position']+"\n<br>\n<br>"
