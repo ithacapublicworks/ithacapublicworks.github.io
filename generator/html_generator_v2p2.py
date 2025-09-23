@@ -126,11 +126,11 @@ def make_pages():
 
 
 
-    with open('test_home.html','w',encoding='utf-8') as outfile: #utf-8 required to get 'special' characters like mac's bullshit quotes or whatever.
-        n = outfile.write(homepage)
-
-    with open('test_old.html','w',encoding='utf-8') as outfile: #utf-8 required to get 'special' characters like mac's bullshit quotes or whatever.
-        n = outfile.write(htmlcode)
+    # with open('test_home.html','w',encoding='utf-8') as outfile: #utf-8 required to get 'special' characters like mac's bullshit quotes or whatever.
+    #     n = outfile.write(homepage)
+# 
+    # with open('test_old.html','w',encoding='utf-8') as outfile: #utf-8 required to get 'special' characters like mac's bullshit quotes or whatever.
+    #     n = outfile.write(htmlcode)
 
 
     currentpath = os.path.abspath(os.curdir)
